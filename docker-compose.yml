@@ -17,7 +17,7 @@ services:
   django:
     build:
       context: .
-      dockerfile: ./compose/django/Dockerfile-dev
+      dockerfile: ./Dockerfile
     environment:
       - DJANGO_DEBUG=True
       - DJANGO_DB_HOST=db
@@ -32,8 +32,8 @@ services:
       - bash
       - -c
       - |
-        python manage.py migrate
-        python manage.py runserver 0:8000
+        python ./opencv_webapp/cvlecture/manage.py migrate
+        python ./opencv_webapp/cvlecture/manage.py runserver 0:8000
     restart: always
     volumes:
       - ./:/app/

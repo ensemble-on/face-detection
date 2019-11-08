@@ -1,0 +1,6 @@
+Django
+numpy
+opencv-python
+Pillow
+pytz
+psycopg2-binary
